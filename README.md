@@ -28,8 +28,8 @@ introducido por el usuario se sustituye por otra que ocupa k1 posiciones más al
 por la que ocupa k2 posiciones más allá, y así sucesivamente.
 
 ## Ejemplo
-Palabra clave: Misión
-Texto original: Este mensaje se autodetruirá en cinco segundos.
+- **Palabra clave:** Misión
+- **Texto original:** Este mensaje se autodetruirá en cinco segundos.
 
 <table>
     <tr>
@@ -64,4 +64,4 @@ Texto original: Este mensaje se autodetruirá en cinco segundos.
     </tr>   
 </table>
 
-Pista: Se puede usar el código ASCII y las funciones ord y char, teniendo en cuenta que las letras en mayúsculas se encuentran a partir de la posición 65.
+**Pista:** Se puede usar el código ASCII y las funciones ord y char, teniendo en cuenta que las letras en mayúsculas se encuentran a partir de la posición 65.
