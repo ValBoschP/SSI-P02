@@ -41,8 +41,6 @@ Texto original: Este mensaje se autodetruirá en cinco segundos.
         <td>RAENCI</td>
         <td>NCOSEG</td>
         <td>UNDOS</td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>Clave:</td>
@@ -53,8 +51,6 @@ Texto original: Este mensaje se autodetruirá en cinco segundos.
         <td>MISION</td>
         <td>MISION</td>
         <td>MISION</td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>Texto cifrado:</td>
@@ -65,8 +61,6 @@ Texto original: Este mensaje se autodetruirá en cinco segundos.
         <td>DIWVQV</td>
         <td>ZKGAST</td>
         <td>GVVWG</td>
-        <td></td>
-        <td></td>
     </tr>   
 </table>
 
