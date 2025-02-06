@@ -2,16 +2,19 @@
 #define VIGENERE_H 
 
 #include <string>
+#include <cctype>
+#include <iostream>
 
 class VigenereCipher {
  public:
-  VigenereCipher(const std::string& key) : key_{key} {}
-
+  // Constructor
+  VigenereCipher(const std::string& key);
   // Getter
   std::string GetKey() const { return key_; }
-
+  // Methods
   std::string Encrypt(const std::string& text) const;
   std::string Decrypt(const std::string& text) const;
+  
  private:
   std::string key_;
 };
