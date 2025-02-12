@@ -8,6 +8,7 @@
 
 void ProcessEncryption() {
   std::string key, text;
+  system("clear");
   std::cout << "Key: ";
   std::getline(std::cin, key);
   VigenereCipher cipher(key);
@@ -25,6 +26,7 @@ void ProcessEncryption() {
 
 void ProcessDecryption() {
   std::string key, cipher_text;
+  system("clear");
   std::cout << "Key: ";
   std::getline(std::cin, key);
   VigenereCipher cipher(key);
