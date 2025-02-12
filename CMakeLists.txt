@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 set(PROJECT_NAMESPACE "SSI-P02")
 project("SSI-P02"
 	VERSION 1.0.0
-	DESCRIPTION "SSI: Práctica 2 - Cifrado de Vigènere"
+	DESCRIPTION "SSI: Práctica 2 - Cifrado de Vigenere"
 	LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

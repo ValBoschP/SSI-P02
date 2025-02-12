@@ -1,8 +1,23 @@
+/* Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Asignatura: Seguridad en Sistemas Informáticos
+ * Curso: 3º
+ * Práctica 2: Cifrado de Vigenere
+ * Autor: Valeria Bosch Pérez
+ * Correo: alu0101485287@ull.edu.es
+ * Fecha: 5/02/2025
+ * Archivo: vigenere.cc: Implementación de la clase VigenereCipher
+ */
+
 #include "vigenere.h"
 #include "utils.h"
 
 #include <cctype>
 
+/**
+ * @brief VigenereCipher constructor
+ */
 VigenereCipher::VigenereCipher(const std::string& key) {
   for (char c : key) {
     if (std::isalpha(c)) {
@@ -14,6 +29,11 @@ VigenereCipher::VigenereCipher(const std::string& key) {
   }
 }
 
+/**
+ * @brief Encrypts a text using the Vigenere cipher
+ * @param text Text to encrypt
+ * @return Encrypted text
+ */
 std::string VigenereCipher::Encrypt(const std::string& text) const {
   std::string processed = PreProcessText(text);
   if (processed.empty()) return "";
@@ -26,6 +46,11 @@ std::string VigenereCipher::Encrypt(const std::string& text) const {
   return encrypted;
 }
 
+/**
+ * @brief Decrypts a text using the Vigenere cipher
+ * @param text Text to decrypt
+ * @return Decrypted text
+ */
 std::string VigenereCipher::Decrypt(const std::string& text) const {
   std::string clean_text;
   for (char c : text) {
