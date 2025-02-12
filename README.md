@@ -17,10 +17,11 @@ $ ./build/bin/Vernam
 Implementar el cifrado de Vigenère.
 
 ## Desarrollo
-Implementa el cifrado y descifrado de Vigenere según la descripción que se incluye a continuación:
+Implementa el cifrado y descifrado de **Vigenere** según la descripción que se incluye a continuación:
 Se usará el alfabeto sin Ñ, con W y sin espacios, luego el módulo para las operaciones será 26.
 El cifrado opera sobre bloques de letras, y la clave es una palabra o frase que se repite cuantas veces sea
 necesario.
+
 Si la clave tiene longitud m, entonces el texto se divide en bloques de longitud m y la clave se suma a cada
 bloque, sumando letra a letra módulo 26, para producir el texto cifrado.
 Dicho de otra forma, dada la clave k1 k2 ...km introducida por el usuario, la primera letra del texto original
