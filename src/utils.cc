@@ -36,6 +36,7 @@ void ProcessEncryption() {
   std::cout << "Key: " << cipher.GetKey() << std::endl;
   std::cout << "Original message: " << text << std::endl;
   std::cout << "Encrypted message: " << encrypted << std::endl;
+  std::cout << "Decrypted message: " << cipher.Decrypt(encrypted) << std::endl;
 }
 
 /**
@@ -51,7 +52,7 @@ void ProcessDecryption() {
   std::cout << "Message: ";
   std::getline(std::cin, cipher_text);
 
-  std::string decrypted = cipher.Decrypt(cipher_text);  
+  std::string decrypted = cipher.DecryptAlterno(cipher_text);  
 
   std::cout << "Key: " << cipher.GetKey() << std::endl;;
   std::cout << "Decrypted message: " << decrypted << std::endl;
@@ -83,4 +84,22 @@ std::string PreProcessText(const std::string& text) {
     }
   }
   return processed;
+}
+
+void ProcessEncryptionAlterno() {
+  std::string key, text;
+  system("clear");
+  std::cout << "Key: ";
+  std::getline(std::cin, key);
+  VigenereCipher cipher(key);
+
+  std::cout << "Message: ";
+  std::getline(std::cin, text);
+
+  std::string encrypted = cipher.EncryptAlterno(text);
+
+  std::cout << "Key: " << cipher.GetKey() << std::endl;
+  std::cout << "Original message: " << text << std::endl;
+  std::cout << "Encrypted message: " << encrypted << std::endl;
+  std::cout << "Decrypted message: " << cipher.DecryptAlterno(encrypted) << std::endl;
 }

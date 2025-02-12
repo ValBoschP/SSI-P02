@@ -63,3 +63,40 @@ std::string VigenereCipher::Decrypt(const std::string& text) const {
   }
   return decrypted;
 }
+
+/** MODIFICACION
+ *  Cifrado de clave alterno:
+ *  Cifrado donde se suma en las posiciones impares y se resta en las posiciones pares.
+ *        Se empieza por index 1
+ *        Se invierte la regla para recuperar el mensaje
+ * Ejemplo: 
+ * Key: planeta
+ * Text: el fuego invisible
+ * Cipher Text: TAFHINOTYVVOBBAT
+ */
+
+std::string VigenereCipher::EncryptAlterno(const std::string& text) const {
+  std::string processed = PreProcessText(text);
+  if (processed.empty()) return "";
+
+  std::string encrypted;
+  for (size_t i = 0, j = 0; i < processed.size(); ++i, j = (j + 1) % key_.size()) {
+    int shift = (std::toupper(key_[j]) - 'A');
+    if ((i + 1) % 2 == 0) shift = -shift; 
+    encrypted += 'A' + (processed[i] - 'A' + shift + 26) % 26;
+  }
+  return encrypted;
+}
+
+std::string VigenereCipher::DecryptAlterno(const std::string& text) const {
+  std::string clean_text = PreProcessText(text);
+  if (clean_text.empty()) return "";
+
+  std::string decrypted;
+  for (size_t i = 0, j = 0; i < clean_text.size(); ++i, j = (j + 1) % key_.size()) {
+    int shift = (std::toupper(key_[j]) - 'A');
+    if ((i + 1) % 2 == 0) shift = -shift; // Invertimos la regla para recuperar el mensaje
+    decrypted += 'A' + (clean_text[i] - 'A' - shift + 26) % 26;
+  }
+  return decrypted;
+}

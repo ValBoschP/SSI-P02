@@ -21,4 +21,6 @@ void ProcessDecryption();
 char ShiftChar(char character, char key, bool encrypt);
 std::string PreProcessText(const std::string& text);
 
+void ProcessEncryptionAlterno();
+
 #endif // UTILS_H 

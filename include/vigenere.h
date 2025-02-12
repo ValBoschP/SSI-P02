@@ -30,6 +30,8 @@ class VigenereCipher {
   std::string Encrypt(const std::string& text) const;
   std::string Decrypt(const std::string& text) const;
   
+  std::string EncryptAlterno(const std::string& text) const;
+  std::string DecryptAlterno(const std::string& text) const;
  private:
   std::string key_;
 };

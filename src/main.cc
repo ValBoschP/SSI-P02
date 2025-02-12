@@ -31,6 +31,7 @@ int main() {
     std::cout << std::setw(40) << std::setfill('=') << '\n';
     std::cout << "1. Encrypt" << std::endl;
     std::cout << "2. Decrypt" << std::endl;
+    std::cout << "3. Encrypt (alternate)" << std::endl;
     std::cout << "0. Exit" << std::endl;
     std::cout << "Option: ";
     std::cin >> option;
@@ -43,6 +44,11 @@ int main() {
         break;
       case 2:
         ProcessDecryption();
+        std::cout << std::endl << "Press ENTER to continue...";
+        std::cin.get();
+        break;
+      case 3:
+        ProcessEncryptionAlterno();
         std::cout << std::endl << "Press ENTER to continue...";
         std::cin.get();
         break;
